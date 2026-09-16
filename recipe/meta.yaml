@@ -5,13 +5,13 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/w/wigners/wigners-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/w/wigners/wigners-{{ version }}.tar.gz
   sha256: df356a0bbfb2bbcd44f4d0d03e2e901bf1cd23f9a8715ddcf5ec06da87bec18b
 
 build:
   skip: true  # [py<310]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 2
+  number: 3
 
 requirements:
   build:
